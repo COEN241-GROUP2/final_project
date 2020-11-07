@@ -1,0 +1,11 @@
+config:
+  target: "https://bdqmcopbxd.execute-api.us-west-1.amazonaws.com/test"
+  phases:
+    - duration: 10
+      arrivalRate: 100
+scenarios:
+  - flow:
+      - post:
+          url: "/lambda"
+          headers:
+            Authorization: 'AWS4-HMAC-SHA256 Credential=AKIART7WNCN6GSMM7UV4/20201027/us-west-1/execute-api/aws4_request, SignedHeaders=host;x-amz-date, Signature=73312e8fd7a2c2a09985885bccef7c6bc58f0895f541c6c26e972f66d54b054d'
