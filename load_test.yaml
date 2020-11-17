@@ -2,7 +2,7 @@ config:
   target: "https://bdqmcopbxd.execute-api.us-west-1.amazonaws.com/test"
   phases:
     - duration: 10
-      arrivalRate: 100
+      arrivalRate: 150
 scenarios:
   - flow:
       - post:

@@ -7,7 +7,13 @@ Artillery
       arrivalRate: 100
 ```
 
-Result:
+Number of containers:
+
+```
+75
+```
+
+Log:
 ```
 Started phase 0, duration: 10s @ 08:43:34(-0700) 2020-10-28
 Report @ 08:43:44(-0700) 2020-10-28
@@ -58,130 +64,228 @@ Summary report @ 08:43:45(-0700) 2020-10-28
     200: 1000
 ```
 
-Container No:
-75
-
 # Test 2
 Artillery
 ```yaml
-  pool: 100
   phases:
     - duration: 10
-      arrivalRate: 500
+      arrivalRate: 200
 ```
 
-Result:
+Number of containers:
+
 ```
-Started phase 0, duration: 10s @ 09:06:09(-0700) 2020-10-28
-Report @ 09:06:19(-0700) 2020-10-28
+142
+```
+
+Log:
+```
+Started phase 0, duration: 10s @ 09:42:42(-0800) 2020-11-09
+Report @ 09:42:52(-0800) 2020-11-09
 Elapsed time: 10 seconds
-  Scenarios launched:  2465
-  Scenarios completed: 2435
-  Requests completed:  2435
-  Mean response/sec: 247.54
+  Scenarios launched:  1970
+  Scenarios completed: 1939
+  Requests completed:  1939
+  Mean response/sec: 197.79
   Response time (msec):
-    min: 78.8
-    max: 958.8
-    median: 109.3
-    p95: 136
-    p99: 731.8
+    min: 75.3
+    max: 856.3
+    median: 103.9
+    p95: 697.9
+    p99: 770.8
   Codes:
-    200: 2435
+    200: 1939
 
 Warning:
-CPU usage of Artillery seems to be very high (pids: 33523)
+CPU usage of Artillery seems to be very high (pids: 2846)
 which may severely affect its performance.
 See https://artillery.io/docs/faq/#high-cpu-warnings for details.
 
-Report @ 09:06:29(-0700) 2020-10-28
-Elapsed time: 20 seconds
-  Scenarios launched:  2467
-  Scenarios completed: 2292
-  Requests completed:  2292
-  Mean response/sec: 247.44
+Report @ 09:42:52(-0800) 2020-11-09
+Elapsed time: 11 seconds
+  Scenarios launched:  30
+  Scenarios completed: 61
+  Requests completed:  61
+  Mean response/sec: 42.11
   Response time (msec):
-    min: 85.6
-    max: 2107.2
-    median: 174.4
-    p95: 648
-    p99: 955.9
+    min: 84.1
+    max: 240.8
+    median: 142.7
+    p95: 229.5
+    p99: 240
   Codes:
-    200: 2292
-
-Warning: High CPU usage warning (pids: 33523).
-See https://artillery.io/docs/faq/#high-cpu-warnings for details.
-
-Report @ 09:06:30(-0700) 2020-10-28
-Elapsed time: 22 seconds
-  Scenarios launched:  68
-  Scenarios completed: 273
-  Requests completed:  273
-  Mean response/sec: 38.46
-  Response time (msec):
-    min: 381.2
-    max: 2398.3
-    median: 940.8
-    p95: 1392.7
-    p99: 1921.7
-  Codes:
-    200: 273
+    200: 61
 
 All virtual users finished
-Summary report @ 09:06:31(-0700) 2020-10-28
-  Scenarios launched:  5000
-  Scenarios completed: 5000
-  Requests completed:  5000
-  Mean response/sec: 229.15
+Summary report @ 09:42:52(-0800) 2020-11-09
+  Scenarios launched:  2000
+  Scenarios completed: 2000
+  Requests completed:  2000
+  Mean response/sec: 185.87
   Response time (msec):
-    min: 78.8
-    max: 2398.3
-    median: 120.4
-    p95: 776.1
-    p99: 1308.3
+    min: 75.3
+    max: 856.3
+    median: 104.6
+    p95: 697.2
+    p99: 770.5
   Scenario counts:
-    0: 5000 (100%)
+    0: 2000 (100%)
   Codes:
-    200: 5000
+    200: 2000
 ```
 
-Container numbers:
-68
-
 # Test 3
-root@instance-1:~/coen241# artillery run load_test.yaml 
-Started phase 0, duration: 10s @ 17:41:13(+0000) 2020-11-04
-Report @ 17:41:23(+0000) 2020-11-04
+
+Artillery
+```yaml
+  phases:
+    - duration: 10
+      arrivalRate: 300
+```
+
+Number of containers:
+
+```
+158
+```
+
+Log:
+```
+Started phase 0, duration: 10s @ 17:58:15(-0800) 2020-11-11
+Report @ 17:58:25(-0800) 2020-11-11
 Elapsed time: 10 seconds
-  Scenarios launched:  2759
-  Scenarios completed: 2721
-  Requests completed:  2721
-  Mean response/sec: 276.53
+  Scenarios launched:  2215
+  Scenarios completed: 2119
+  Requests completed:  2119
+  Mean response/sec: 222.19
   Response time (msec):
-    min: 112.6
-    max: 337.9
-    median: 126.2
-    p95: 231.3
-    p99: 296.8
+    min: 93
+    max: 1709.9
+    median: 149.6
+    p95: 742
+    p99: 812.5
   Codes:
-    200: 2721
-Warning: 
-CPU usage of Artillery seems to be very high (pids: 3050)
+    200: 2119
+
+Warning:
+CPU usage of Artillery seems to be very high (pids: 9320)
 which may severely affect its performance.
 See https://artillery.io/docs/faq/#high-cpu-warnings for details.
-Report @ 17:41:24(+0000) 2020-11-04
-Elapsed time: 11 seconds
-  Scenarios launched:  241
-  Scenarios completed: 279
-  Requests completed:  279
-  Mean response/sec: 185.5
+
+Report @ 17:58:29(-0800) 2020-11-11
+Elapsed time: 14 seconds
+  Scenarios launched:  785
+  Scenarios completed: 881
+  Requests completed:  881
+  Mean response/sec: 184.74
   Response time (msec):
-    min: 109.4
-    max: 293.4
-    median: 127.6
-    p95: 172.5
-    p99: 262.4
+    min: 200.5
+    max: 1638
+    median: 318.9
+    p95: 401.7
+    p99: 1593.3
+  Codes:
+    200: 881
 
-load_param:
-10, 300
+All virtual users finished
+Summary report @ 17:58:29(-0800) 2020-11-11
+  Scenarios launched:  3000
+  Scenarios completed: 3000
+  Requests completed:  3000
+  Mean response/sec: 210.38
+  Response time (msec):
+    min: 93
+    max: 1709.9
+    median: 229
+    p95: 729.8
+    p99: 1430.4
+  Scenario counts:
+    0: 3000 (100%)
+  Codes:
+    200: 3000
+```
 
+# Test 4
 
+Artillery
+```yaml
+  phases:
+    - duration: 10
+      arrivalRate: 150
+```
+
+Number of containers:
+
+```
+112
+```
+
+Log:
+```
+Started phase 0, duration: 10s @ 14:44:12(-0800) 2020-11-13
+Report @ 14:44:22(-0800) 2020-11-13
+Elapsed time: 10 seconds
+  Scenarios launched:  1498
+  Scenarios completed: 1296
+  Requests completed:  1296
+  Mean response/sec: 150.86
+  Response time (msec):
+    min: 98.9
+    max: 1414.9
+    median: 695.3
+    p95: 1369.6
+    p99: 1389.4
+  Codes:
+    200: 1296
+
+Report @ 14:44:24(-0800) 2020-11-13
+Elapsed time: 11 seconds
+  Scenarios launched:  2
+  Scenarios completed: 204
+  Requests completed:  204
+  Mean response/sec: 1.33
+  Response time (msec):
+    min: 955.8
+    max: 1376.1
+    median: 1275.5
+    p95: 1349.9
+    p99: 1368.7
+  Codes:
+    200: 204
+
+All virtual users finished
+Summary report @ 14:44:24(-0800) 2020-11-13
+  Scenarios launched:  1500
+  Scenarios completed: 1500
+  Requests completed:  1500
+  Mean response/sec: 130.78
+  Response time (msec):
+    min: 98.9
+    max: 1414.9
+    median: 771.5
+    p95: 1365.7
+    p99: 1389
+  Scenario counts:
+    0: 1500 (100%)
+  Codes:
+    200: 1500
+```
+
+# Test 5
+
+Artillery
+```yaml
+  phases:
+    - duration: 10
+      arrivalRate: 250
+```
+
+Number of containers:
+
+```
+?
+```
+
+Log:
+```
+```
