@@ -1,9 +1,9 @@
 config:
-  target: "https://coen241-group2-scalability-test.azurewebsites.net/"
+  target: "https://coen241-group2-scalability-test2.azurewebsites.net/"
   phases:
     - duration: 10
-      arrivalRate: 50
+      arrivalRate: 150
 scenarios:
   - flow:
       - get:
-          url: "/api/scalability_test?code=B10dpCdcZrAwb5eLiq2TQqiedQusgM5UD8hIEraX6aoD7ADP4ogvzg=="
+          url: "/api/scalability_test?code=HSUNC3SL24uuqmI86WFJC53oGMly4D6XgSawrLIZ5KgFb5Q9VNmMrA=="
